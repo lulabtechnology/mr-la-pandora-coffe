@@ -2,7 +2,7 @@
 
 Landing de presentación de La Pandora Coffee en español (`/`), inglés (`/en/`) y ruso (`/ru/`). No contiene menú, precios, catálogo ni tienda. El dominio canónico configurado es `https://lapandoracoffee.com`.
 
-La dirección visual usa el rojo exacto del logotipo oficial, blanco y negro. La portada muestra una fotografía propia de la taza; la fábula, el espacio, la preparación y el origen tienen secciones con imágenes reales del material entregado. No se usan fotos genéricas. `FUENTES.md` detalla la procedencia.
+Esta propuesta se inspira en la fotografía inmersiva y el ritmo editorial de Nkora sin copiar sus elementos. La portada ocupa toda la pantalla con una taza real de La Pandora; espresso, madera y tonos tostados dominan la página. El rojo queda en el logotipo oficial, que se conserva sin editar. La fábula, el espacio, la preparación y el origen usan imágenes del material entregado. No se usan fotos genéricas. `FUENTES.md` detalla la procedencia.
 
 ## Desarrollo
 

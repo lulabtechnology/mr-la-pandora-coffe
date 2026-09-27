@@ -6,7 +6,7 @@ Investigación y ejecución: 27 de septiembre de 2026. Esta es una estrategia pa
 
 | Prioridad | Consulta / grupo | Intención | Qué aporta la página |
 | --- | --- | --- | --- |
-| 1 | `La Pandora Coffee`, `La Pandora Coffee Panamá`, `Pandora Coffee Panamá`, `Mr La Pandora` | Encontrar la marca | Nombre consistente en título, H1 contextual, texto, datos estructurados, redes y dominio |
+| 1 | `La Pandora Coffee`, `La Pandora Coffee Panamá`, `Pandora Coffee Panamá`, `Mr La Pandora` | Encontrar la marca | Nombre consistente en título, cabecera visible, texto, datos estructurados, redes y dominio |
 | 1 | `café en Calle 50`, `cafetería Calle 50 Panamá`, `coffee shop Calle 50 Panama City` | Visitar una cafetería cercana | Zona en título, descripción, contenido visible, mapa, horario y marcado local |
 | 2 | `café en Ciudad de Panamá`, `cafeterías en Panamá`, `café de especialidad Panamá` | Descubrir opciones | Historia y propósito reales, café panameño y ubicación; requerirá reputación y menciones externas para competir |
 | 2 | `Panamanian coffee shop Panama City`, `coffee on Calle 50` | Visitantes angloparlantes | Página inglesa indexable con URL propia y `hreflang` |
@@ -30,7 +30,7 @@ No se puede declarar un “top” universal a partir de estas guías ni asegurar
 - Texto visible y concreto sobre la historia, el café panameño, la zona, horario y respuestas a preguntas frecuentes en los tres idiomas.
 - URL canónica `https://lapandoracoffee.com/` y páginas alternativas `/en/`, `/ru/`; etiquetas `hreflang` y sitemap con URLs absolutas.
 - `robots.txt` público y sitemap en `/sitemap.xml`.
-- Metadatos únicos por idioma, Open Graph con la imagen oficial roja y blanca, y `CafeOrCoffeeShop`/`WebPage` en JSON-LD.
+- Metadatos únicos por idioma, Open Graph con la fotografía propia de la taza, y `CafeOrCoffeeShop`/`WebPage` en JSON-LD. El logo rojo y blanco permanece en el marcado de la entidad.
 - Una sola fuente de entidad en los datos estructurados: nombre, nombres alternativos de marca, dirección de zona, coordenadas y horarios. No se incluyó teléfono porque hay dos números distintos en las fuentes.
 - Crédito visible y enlace normal a [LulabTech](https://lulabtech.com/) en el pie.
 

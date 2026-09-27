@@ -2,11 +2,11 @@
 
 | Archivo web | Procedencia | Uso |
 | --- | --- | --- |
-| `public/images/logo-oficial.jpg` | Imagen roja y blanca enviada por el usuario el 27/09/2026 | Logo en cabecera, pie, favicon y vista previa social; mismo SHA-256 que el adjunto (`5166F015A891B8F211E7EAC5F5FC8188AAE52F3A188BCE824B8A77C5E97806F9`) |
+| `public/images/logo-oficial.jpg` | Imagen roja y blanca enviada por el usuario el 27/09/2026 | Logo en cabecera, pie, favicon y datos estructurados; mismo SHA-256 que el adjunto (`5166F015A891B8F211E7EAC5F5FC8188AAE52F3A188BCE824B8A77C5E97806F9`) |
 | `public/images/espacio-pandora.webp` | `lapandoraespacio01.jpg` | Tercera fotografía de la galería del local |
 | `public/images/interior-pandora.webp` | `espacio04.jpg` | Fotografía del interior |
 | `public/images/ritual-pandora.webp` | `lapandorametodo.jpg` | Fotografía de preparación |
-| `public/images/taza-pandora.webp` | `WhatsApp Image 2026-07-27 at 9.20.48 AM.jpeg` | Fotografía protagonista de la portada |
+| `public/images/taza-pandora.webp` | `WhatsApp Image 2026-07-27 at 9.20.48 AM.jpeg` | Fotografía protagonista de la portada y vista previa social |
 | `public/images/fabula-pandora.webp` | `COFFEESTICKER copia.pdf` | Ilustración de la fábula |
 | `public/images/empaque-pandora.webp` | `Unknown-3.jpeg` | Empaque e identidad visual en la sección de origen |
 

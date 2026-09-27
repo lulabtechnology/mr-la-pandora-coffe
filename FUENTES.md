@@ -1,18 +1,21 @@
-# Fuentes del contenido y los recursos
+# Procedencia y decisiones editoriales
 
-El sitio usa material recibido con el encargo. Esta lista permite reemplazar cada recurso sin perder su procedencia.
-
-| Archivo web | Archivo original del cliente | Uso |
+| Archivo web | Procedencia | Uso |
 | --- | --- | --- |
+| `public/images/logo-oficial.jpg` | Imagen roja y blanca enviada por el usuario el 27/09/2026 | Logo en cabecera, pie, favicon y vista previa social; mismo SHA-256 que el adjunto (`5166F015A891B8F211E7EAC5F5FC8188AAE52F3A188BCE824B8A77C5E97806F9`) |
 | `public/images/espacio-pandora.webp` | `lapandoraespacio01.jpg` | Fotografía principal del local |
 | `public/images/interior-pandora.webp` | `espacio04.jpg` | Fotografía del interior |
-| `public/images/ritual-pandora.webp` | `lapandorametodo.jpg` | Fotografía de preparación del café |
+| `public/images/ritual-pandora.webp` | `lapandorametodo.jpg` | Fotografía de preparación |
 | `public/images/taza-pandora.webp` | `WhatsApp Image 2026-07-27 at 9.20.48 AM.jpeg` | Fotografía de la taza |
-| `public/images/logo-verde.webp` y `logo-crema.webp` | `logopandoracoloresai.ai` | Logotipo original adaptado para web |
-| `public/images/fabula-pandora.webp` | `COFFEESTICKER copia.pdf` | Ilustración original extraída del arte de etiqueta |
-| `public/images/social-preview.jpg` | Composición de logotipo e ilustración anteriores | Vista previa al compartir |
-| `public/images/empaque-pandora.webp` | `Unknown-3.jpeg` | Recurso adicional disponible; no se muestra en la landing |
+| `public/images/fabula-pandora.webp` | `COFFEESTICKER copia.pdf` | Ilustración de la fábula |
+| `public/images/empaque-pandora.webp` | `Unknown-3.jpeg` | Empaque e identidad visual en la sección de origen |
+| `public/images/cafe-fruto-editorial.webp` | `eduardo-gorghetto-vJ3KldG86Eo-unsplash.jpg`, incluido en el ZIP del cliente | Fotografía editorial de apoyo junto al empaque; no representa una finca concreta de La Pandora |
+| `public/images/cafe-preparacion-editorial.webp` | `raymond-petrik-JvQ0TTXxJEw-unsplash.jpg`, incluido en el ZIP del cliente | Fotografía editorial de apoyo en la galería; no representa a un barista o local de La Pandora |
 
-Los datos de Calle 50, coordenadas, horarios y objetivos de la página se tomaron de `lulab-portal-la-pandora-coffee-20260927-172119.pdf`. El usuario definió posteriormente el alcance final como **una landing para dar a conocer la marca, sin menú ni datos de productos**; esa indicación guía esta entrega.
+El Illustrator entregado (`logopandoracoloresai.ai`) contiene variantes del mismo nombre con una frase adicional. La versión anterior usaba una de ellas, pero el usuario indicó expresamente que la identidad principal aquí es el logo rojo y blanco sin frase.
 
-Los titulares, descripciones y traducciones de la web son redacción creada para este diseño a partir de la información recibida. La cuenta `@lapandoracoffee` aparece en los artes de la marca. Los datos marcados en el README deben confirmarse antes de publicar.
+El texto de origen (fábula, microlotes para exportación, apertura de barra y tueste), zona Calle 50, coordenadas y horario provienen del PDF `lulab-portal-la-pandora-coffee-20260927-172119.pdf`. La marca no suministró datos verificados de menú, precios o productos para esta landing; no se publican.
+
+El PDF y el perfil público de Google discrepan en el teléfono. Se deja fuera hasta confirmar el dato oficial. Los titulares y las traducciones son redacción editorial basada en las fuentes indicadas y deben recibir revisión de la marca antes de la publicación definitiva.
+
+En el perfil público de Google hay más imágenes, incluida una fachada reciente subida por el negocio. No se descargaron de ese perfil para la web: para la versión de máxima calidad conviene solicitar los archivos originales y confirmar permiso de uso.

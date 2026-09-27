@@ -71,7 +71,9 @@ const pageData = {
     {locales.map((lang) => <link rel="alternate" hreflang={lang} href={`${siteUrl}${paths[lang]}`} />)}
     <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
     <link rel="icon" type="image/jpeg" href="/images/logo-oficial.jpg" />
-    <link rel="preload" as="image" href="/images/taza-pandora.webp" />
+    {locale !== 'ru' && <link rel="preload" as="font" type="font/woff2" href="/fonts/bricolage-grotesque-latin-wght.woff2" crossorigin="anonymous" />}
+    <link rel="preload" as="image" href="/images/hero-panorama-editorial.png" media="(min-width: 761px)" />
+    <link rel="preload" as="image" href="/images/taza-pandora.webp" media="(max-width: 760px)" />
     <title>{t.seoTitle}</title>
     <script type="application/ld+json" set:html={JSON.stringify([businessData, pageData])} />
   </head>
@@ -91,37 +93,37 @@ const pageData = {
 
       <main id="main">
         <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-photo"><img src="/images/taza-pandora.webp" alt={t.heroImageAlt} width="1050" height="1400" fetchpriority="high" /></div>
+          <div class="hero-photo"><picture><source media="(min-width: 761px)" srcset="/images/hero-panorama-editorial.png" /><img src="/images/taza-pandora.webp" alt={t.heroImageAlt} width="1050" height="1400" fetchpriority="high" /></picture></div>
           <div class="hero-shade" aria-hidden="true"></div>
           <div class="hero-content">
             <p class="hero-overline">{t.heroEyebrow}</p>
             <div class="hero-main">
               <h1 id="hero-title"><span>{t.heroLine1}</span><em>{t.heroLine2}</em></h1>
-              <div class="hero-aside"><p>{t.heroText}</p><a class="pill-link pill-light" href="#historia">{t.discover}<span aria-hidden="true">↘</span></a></div>
+              <div class="hero-aside"><p>{t.heroText}</p><a class="pill-link pill-light" href="#experiencia">{t.discover}<span aria-hidden="true">↘</span></a></div>
             </div>
-            <div class="hero-foot"><span>LA PANDORA COFFEE / PANAMÁ</span><a href="#historia" aria-label={t.scroll}><span>{t.scroll}</span><span aria-hidden="true">↓</span></a></div>
+            <div class="hero-foot"><span>LA PANDORA COFFEE / PANAMÁ</span><a href="#experiencia" aria-label={t.scroll}><span>{t.scroll}</span><span aria-hidden="true">↓</span></a></div>
           </div>
         </section>
 
         <div class="interlude" aria-hidden="true"><span>{t.interlude}</span><span class="interlude-mark">✳</span><span>{t.interlude}</span></div>
 
+        <section class="experience" id="experiencia" aria-labelledby="experience-title">
+          <div class="section-wrap experience-intro"><div class="section-label"><span>01 / 04</span><span>{t.experienceEyebrow}</span></div><div class="experience-head"><h2 id="experience-title">{t.experienceTitle}</h2><p>{t.experienceText}</p></div></div>
+          <div class="experience-gallery">
+            <figure><img src="/images/interior-pandora.webp" alt={t.experienceImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>01</span>{t.caption1}</figcaption></figure>
+            <figure><img src="/images/ritual-pandora.webp" alt={t.coffeeImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>02</span>{t.caption2}</figcaption></figure>
+            <figure><img src="/images/espacio-pandora.webp" alt={t.spaceImageAlt} width="1550" height="2693" loading="lazy" /><figcaption><span>03</span>{t.caption3}</figcaption></figure>
+          </div>
+        </section>
+
         <section class="story" id="historia" aria-labelledby="story-title">
           <div class="section-wrap">
-            <div class="section-label"><span>01 / 04</span><span>{t.storyEyebrow}</span></div>
+            <div class="section-label"><span>02 / 04</span><span>{t.storyEyebrow}</span></div>
             <div class="story-heading"><h2 id="story-title">{t.storyTitle1}<br /><em>{t.storyTitle2}</em></h2></div>
             <div class="story-grid">
               <figure class="story-art"><img src="/images/fabula-pandora.webp" alt={t.artworkAlt} width="1161" height="1020" loading="lazy" /><figcaption>{t.artworkCaption}</figcaption></figure>
               <div class="story-copy"><p>{t.storyText}</p><span class="story-signature">La Pandora <span aria-hidden="true">✳</span></span></div>
             </div>
-          </div>
-        </section>
-
-        <section class="experience" id="experiencia" aria-labelledby="experience-title">
-          <div class="section-wrap experience-intro"><div class="section-label"><span>02 / 04</span><span>{t.experienceEyebrow}</span></div><div class="experience-head"><h2 id="experience-title">{t.experienceTitle}</h2><p>{t.experienceText}</p></div></div>
-          <div class="experience-gallery">
-            <figure><img src="/images/interior-pandora.webp" alt={t.experienceImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>01</span>{t.caption1}</figcaption></figure>
-            <figure><img src="/images/ritual-pandora.webp" alt={t.coffeeImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>02</span>{t.caption2}</figcaption></figure>
-            <figure><img src="/images/espacio-pandora.webp" alt={t.spaceImageAlt} width="1550" height="2693" loading="lazy" /><figcaption><span>03</span>{t.caption3}</figcaption></figure>
           </div>
         </section>
 

@@ -27,7 +27,7 @@ No se puede declarar un “top” universal a partir de estas guías ni asegurar
 
 ## Implementado en este ZIP
 
-- Texto visible y concreto sobre la historia, el café panameño, la zona, horario y respuestas a preguntas frecuentes en los tres idiomas.
+- Texto visible y concreto sobre la historia, el café panameño, la zona, horario y respuestas a preguntas frecuentes en los tres idiomas. La portada identifica «café en Panamá» y «cafetería en Calle 50» sin repetir términos de búsqueda de forma artificial.
 - URL canónica `https://lapandoracoffee.com/` y páginas alternativas `/en/`, `/ru/`; etiquetas `hreflang` y sitemap con URLs absolutas.
 - `robots.txt` público y sitemap en `/sitemap.xml`.
 - Metadatos únicos por idioma, Open Graph con la fotografía propia de la taza, y `CafeOrCoffeeShop`/`WebPage` en JSON-LD. El logo rojo y blanco permanece en el marcado de la entidad.
@@ -50,6 +50,6 @@ Estas señales ayudan a buscadores y sistemas de respuestas a entender la marca.
 - **Teléfono:** PDF `69825757` frente a perfil público de Google `6626-8763`; decidir el correcto.
 - **Dirección postal exacta y enlace directo al perfil de Maps:** el PDF da la zona Calle 50 y coordenadas; el perfil público muestra una dirección más específica. Validar el número/local antes de usarlo en la página y en Schema.
 - **Horarios vigentes, Instagram y traducciones:** validar con la marca.
-- **Fotografías originales adicionales:** fachada reconocible, equipo, barra y tueste, para reforzar autenticidad. Esta versión usa solo fotografías y arte de La Pandora incluidos en el material entregado. El perfil público de Google muestra una fachada reciente, pero conviene pedir el archivo original y permiso de uso en lugar de reutilizar una copia pequeña del perfil.
+- **Fotografías originales adicionales:** fachada reconocible, equipo, barra y tueste, para reforzar autenticidad. Esta versión usa las cinco fotografías y la ilustración entregadas por La Pandora; el panorámico de escritorio es una expansión editorial generada desde la foto original de la taza y está documentado en `FUENTES.md`. El perfil público de Google muestra una fachada reciente, pero conviene pedir el archivo original y permiso de uso en lugar de reutilizar una copia pequeña del perfil.
 - **Pruebas verificables** de premios, valoraciones o afirmaciones técnicas si se desean publicar después.
 - **Acceso** a Vercel/DNS, Search Console y Google Business Profile para ejecutar los pasos externos. No está disponible dentro de este ZIP.

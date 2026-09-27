@@ -2,7 +2,9 @@
 
 Landing de presentación de La Pandora Coffee en español (`/`), inglés (`/en/`) y ruso (`/ru/`). No contiene menú, precios, catálogo ni tienda. El dominio canónico configurado es `https://lapandoracoffee.com`.
 
-Esta propuesta se inspira en la fotografía inmersiva y el ritmo editorial de Nkora sin copiar sus elementos. La portada ocupa toda la pantalla con una taza real de La Pandora; espresso, madera y tonos tostados dominan la página. El rojo queda en el logotipo oficial, que se conserva sin editar. La fábula, el espacio, la preparación y el origen usan imágenes del material entregado. No se usan fotos genéricas. `FUENTES.md` detalla la procedencia.
+Esta propuesta se inspira en la fotografía inmersiva y el ritmo editorial de Nkora sin copiar sus elementos. En escritorio, la portada usa una composición panorámica generada a partir de la fotografía real de la taza; en móvil, conserva la fotografía original. Espresso, madera y tonos tostados dominan la página. El rojo queda en el logotipo oficial, que se conserva sin editar. La primera sección muestra el espacio y la preparación con imágenes reales del material entregado. No se usan fotos genéricas. `FUENTES.md` detalla la procedencia.
+
+El cliente no fijó una familia tipográfica, pero pidió una sans serif moderna con un toque artesanal. Esta versión usa Bricolage Grotesque autoalojada en titulares latinos, DM Sans para lectura e Instrument Serif como acento editorial. El archivo de licencia de Bricolage se incluye en `public/fonts/`. La elección tipográfica da identidad y legibilidad; el SEO/GEO depende principalmente de la claridad del contenido, la información local verificable y las señales técnicas.
 
 ## Desarrollo
 

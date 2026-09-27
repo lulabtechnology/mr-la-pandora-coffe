@@ -50,6 +50,6 @@ Estas señales ayudan a buscadores y sistemas de respuestas a entender la marca.
 - **Teléfono:** PDF `69825757` frente a perfil público de Google `6626-8763`; decidir el correcto.
 - **Dirección postal exacta y enlace directo al perfil de Maps:** el PDF da la zona Calle 50 y coordenadas; el perfil público muestra una dirección más específica. Validar el número/local antes de usarlo en la página y en Schema.
 - **Horarios vigentes, Instagram y traducciones:** validar con la marca.
-- **Fotografías originales adicionales:** fachada reconocible, equipo, barra y tueste, para reforzar autenticidad. Esta versión incorporó dos imágenes editoriales del ZIP del cliente junto a las fotos propias. El perfil público de Google muestra una fachada reciente, pero conviene pedir el archivo original y permiso de uso en lugar de reutilizar una copia pequeña del perfil.
+- **Fotografías originales adicionales:** fachada reconocible, equipo, barra y tueste, para reforzar autenticidad. Esta versión usa solo fotografías y arte de La Pandora incluidos en el material entregado. El perfil público de Google muestra una fachada reciente, pero conviene pedir el archivo original y permiso de uso en lugar de reutilizar una copia pequeña del perfil.
 - **Pruebas verificables** de premios, valoraciones o afirmaciones técnicas si se desean publicar después.
 - **Acceso** a Vercel/DNS, Search Console y Google Business Profile para ejecutar los pasos externos. No está disponible dentro de este ZIP.

@@ -1,0 +1,147 @@
+---
+import '@fontsource/dm-sans/400.css';
+import '@fontsource/dm-sans/500.css';
+import '@fontsource/dm-sans/600.css';
+import '@fontsource/dm-sans/700.css';
+import '@fontsource/instrument-serif/400.css';
+import '@fontsource/instrument-serif/400-italic.css';
+import '../styles/global.css';
+import { content, locales, type Locale } from '../data/content';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = content[locale];
+const paths: Record<Locale, string> = { es: '/', en: '/en/', ru: '/ru/' };
+const siteUrl = (import.meta.env.PUBLIC_SITE_URL || '').replace(/\/$/, '');
+const canonical = siteUrl ? `${siteUrl}${paths[locale]}` : undefined;
+const socialImage = siteUrl ? `${siteUrl}/images/social-preview.jpg` : '/images/social-preview.jpg';
+const mapUrl = 'https://www.google.com/maps/search/?api=1&query=8.991044,-79.511425';
+const instagramUrl = 'https://www.instagram.com/lapandoracoffee/';
+const homeLabel = { es: 'La Pandora Coffee, inicio', en: 'La Pandora Coffee, home', ru: 'La Pandora Coffee, главная' }[locale];
+const topLabel = { es: 'Volver arriba', en: 'Back to top', ru: 'Наверх' }[locale];
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'CafeOrCoffeeShop',
+  name: 'La Pandora Coffee',
+  description: t.seoDescription,
+  image: siteUrl ? `${siteUrl}/images/espacio-pandora.webp` : undefined,
+  url: canonical,
+  sameAs: [instagramUrl],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Calle 50',
+    addressLocality: 'Ciudad de Panamá',
+    addressCountry: 'PA',
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: 8.991044, longitude: -79.511425 },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '21:00' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '08:00', closes: '16:00' },
+  ],
+};
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2d472f" />
+    <meta name="description" content={t.seoDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content={locale === 'es' ? 'es_PA' : locale === 'en' ? 'en_US' : 'ru_RU'} />
+    <meta property="og:site_name" content="La Pandora Coffee" />
+    <meta property="og:title" content={t.seoTitle} />
+    <meta property="og:description" content={t.seoDescription} />
+    <meta property="og:image" content={socialImage} />
+    {canonical && <meta property="og:url" content={canonical} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    {canonical && <link rel="canonical" href={canonical} />}
+    {siteUrl && locales.map((lang) => <link rel="alternate" hreflang={lang} href={`${siteUrl}${paths[lang]}`} />)}
+    {siteUrl && <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />}
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" as="image" href="/images/espacio-pandora.webp" />
+    <title>{t.seoTitle}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t.skip}</a>
+    <div class="site-shell">
+      <header class="site-header" aria-label="La Pandora Coffee">
+        <a class="brand" href={paths[locale]} aria-label={homeLabel}>
+          <img src="/images/logo-verde.webp" alt="La Pandora Coffee" width="1066" height="275" />
+        </a>
+        <div class="header-actions">
+          <div class="languages" aria-label="Language / Idioma / Язык">
+            {locales.map((lang) => <a href={paths[lang]} lang={lang} hreflang={lang} aria-current={locale === lang ? 'page' : undefined}>{lang.toUpperCase()}</a>)}
+          </div>
+          <a class="header-visit" href="#visita">{t.visit}<span aria-hidden="true"> ↗</span></a>
+        </div>
+      </header>
+
+      <main id="main">
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-copy">
+            <p class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span>{t.heroEyebrow}</p>
+            <h1 id="hero-title"><span>{t.heroLine1}</span><em>{t.heroLine2}</em></h1>
+            <p class="hero-intro">{t.heroText}</p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#historia">{t.discover}<span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="#visita">{t.visit}<span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="hero-foot"><span class="hero-index">01 / 03</span><span>{t.scroll} <span aria-hidden="true">↓</span></span></div>
+          </div>
+          <div class="hero-media">
+            <div class="hero-photo-frame">
+              <img class="hero-photo" src="/images/espacio-pandora.webp" alt={t.heroImageAlt} width="1550" height="2693" fetchpriority="high" />
+            </div>
+            <div class="hero-stamp" aria-hidden="true"><span>La Pandora</span><strong>COFFEE<br />& CULTURE</strong><span>Panamá · Panamá</span></div>
+            <span class="photo-credit">LA PANDORA / PANAMÁ</span>
+          </div>
+        </section>
+
+        <div class="culture-band" aria-hidden="true"><div class="culture-band-track"><span>{t.marquee} ✳</span><span>{t.marquee} ✳</span><span>{t.marquee} ✳</span><span>{t.marquee} ✳</span></div></div>
+
+        <section class="story section-wrap" id="historia" aria-labelledby="story-title">
+          <div class="section-kicker"><span class="star" aria-hidden="true">✳</span><span>{t.storyEyebrow}</span></div>
+          <div class="story-grid">
+            <div class="story-copy">
+              <h2 id="story-title">{t.storyTitle1}<br /><em>{t.storyTitle2}</em></h2>
+              <p>{t.storyText}</p>
+              <span class="story-signature">La Pandora <span aria-hidden="true">↗</span></span>
+            </div>
+            <figure class="story-art">
+              <div class="art-frame"><img src="/images/fabula-pandora.webp" alt={t.artworkAlt} width="1161" height="1020" loading="lazy" /></div>
+              <figcaption>LA PANDORA / ORIGINAL ARTWORK</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="experience" id="experiencia" aria-labelledby="experience-title">
+          <div class="section-wrap">
+            <div class="section-kicker"><span class="star" aria-hidden="true">✳</span><span>{t.experienceEyebrow}</span></div>
+            <div class="experience-top"><h2 id="experience-title">{t.experienceTitle}</h2><p>{t.experienceText}</p></div>
+            <div class="experience-gallery">
+              <figure class="gallery-card gallery-card-large"><img src="/images/interior-pandora.webp" alt={t.experienceImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>01</span>{t.caption1}</figcaption></figure>
+              <figure class="gallery-card gallery-card-small"><img src="/images/ritual-pandora.webp" alt={t.coffeeImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>02</span>{t.caption2}</figcaption></figure>
+              <div class="gallery-note" aria-hidden="true"><span>COFFEE</span><span>CULTURE</span><span>CONNECTION</span><span class="note-star">✳</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="visit" id="visita" aria-labelledby="visit-title">
+          <div class="visit-photo" aria-hidden="true"><img src="/images/taza-pandora.webp" alt="" width="1050" height="1400" loading="lazy" /></div>
+          <div class="visit-content">
+            <div class="section-kicker"><span class="star" aria-hidden="true">✳</span><span>{t.visitEyebrow}</span></div>
+            <h2 id="visit-title">{t.visitTitle}</h2>
+            <p class="visit-intro">{t.visitText}</p>
+            <div class="visit-details"><div><span class="detail-label">{t.location}</span><p>{t.locationValue}</p></div><div><span class="detail-label">{t.hours}</span><p>{t.hours1}<br />{t.hours2}</p></div></div>
+            <div class="visit-links"><a class="button button-light" href={mapUrl} target="_blank" rel="noopener noreferrer">{t.maps}<span aria-hidden="true">↗</span></a><a class="visit-social" href={instagramUrl} target="_blank" rel="noopener noreferrer">{t.instagram}<span aria-hidden="true">↗</span></a></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer"><div class="footer-inner"><img src="/images/logo-crema.webp" alt="La Pandora Coffee" width="1066" height="275" loading="lazy" /><p>{t.footerLine}</p><div class="footer-bottom"><span>© {new Date().getFullYear()} La Pandora Coffee. {t.rights}</span><span>Ciudad de Panamá, Panamá</span><a href="#main" aria-label={topLabel}>↑</a></div></div></footer>
+    </div>
+  </body>
+</html>

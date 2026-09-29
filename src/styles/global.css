@@ -84,6 +84,15 @@ a:focus-visible { outline: 3px solid var(--oat); outline-offset: 5px; }
 .story-copy p { max-width: 530px; font-size: clamp(1.3rem, 2vw, 2.1rem); letter-spacing: -.035em; line-height: 1.42; }
 .story-signature { display: inline-flex; align-items: center; gap: 1rem; margin-top: 3.5rem; color: var(--oat); font-family: 'Instrument Serif', Georgia, serif; font-size: 2.5rem; font-style: italic; }
 .story-signature span { font-family: 'DM Sans', Arial, sans-serif; font-size: 1.2rem; font-style: normal; }
+.founders { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); align-items: end; gap: clamp(2.5rem, 6vw, 7rem); margin-top: clamp(5rem, 9vw, 9rem); padding-top: clamp(2rem, 4vw, 4rem); border-top: 1px solid #ffffff55; }
+.founders-photo { min-width: 0; overflow: hidden; background: var(--walnut); }
+.founders-photo img { width: 100%; height: clamp(390px, 39vw, 580px); object-fit: cover; object-position: center 48%; }
+.founders-copy { padding-bottom: .25rem; }
+.founders-eyebrow { color: var(--oat); font-size: .67rem; font-weight: 700; letter-spacing: .15em; line-height: 1.4; text-transform: uppercase; }
+.founders h3 { margin: 1rem 0 clamp(2.5rem, 5vw, 4.5rem); font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(3.2rem, 4.8vw, 5.7rem); font-style: italic; font-weight: 400; line-height: .98; }
+.founders-person { display: flex; align-items: baseline; justify-content: space-between; gap: 1.5rem; padding: 1.2rem 0; border-top: 1px solid #ffffff77; }
+.founders-person strong { font-size: clamp(1.2rem, 1.55vw, 1.65rem); font-weight: 600; letter-spacing: -.04em; }
+.founders-person span { flex: none; color: var(--oat); font-size: .67rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 
 .experience { padding-top: clamp(5rem, 8vw, 8rem); background: #fff; color: var(--espresso); }
 .experience .section-label span:first-child, .visit .section-label span:first-child { color: #8c5b3d; }
@@ -100,6 +109,13 @@ a:focus-visible { outline: 3px solid var(--oat); outline-offset: 5px; }
 .experience-gallery figure::after { content: ''; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, #100c0acb); pointer-events: none; }
 .experience-gallery figcaption { position: absolute; z-index: 1; left: clamp(1.3rem, 2vw, 2.5rem); right: 1rem; bottom: 1.6rem; display: flex; align-items: baseline; gap: 1rem; color: #fff; font-size: .68rem; font-weight: 700; letter-spacing: .13em; line-height: 1.4; text-transform: uppercase; }
 .experience-gallery figcaption span { color: var(--oat); }
+.coffee-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; margin-top: .5rem; }
+.coffee-pair figure { position: relative; min-width: 0; height: clamp(360px, 37vw, 570px); overflow: hidden; background: var(--walnut); }
+.coffee-pair img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; transition: transform .5s ease; }
+.coffee-pair figure:nth-child(2) img { object-position: 54% 49%; }
+.coffee-pair figure:hover img { transform: scale(1.025); }
+.coffee-pair figure::after { content: ''; position: absolute; inset: 56% 0 0; background: linear-gradient(transparent, #100c0ac7); pointer-events: none; }
+.coffee-pair figcaption { position: absolute; z-index: 1; right: 1.5rem; bottom: 1.6rem; left: clamp(1.3rem, 2vw, 2.5rem); color: #fff; font-size: .68rem; font-weight: 700; letter-spacing: .13em; line-height: 1.4; text-transform: uppercase; }
 
 .origin { display: grid; grid-template-columns: minmax(0, 56%) minmax(0, 44%); min-height: 700px; background: var(--walnut); color: #fff; }
 .origin-copy { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: clamp(5rem, 8vw, 8rem) clamp(1.4rem, 5vw, 5.5rem); }
@@ -185,6 +201,9 @@ html[lang='ru'] .story-heading h2, html[lang='ru'] .origin h2, html[lang='ru'] .
   .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .story-copy p { font-size: 1.3rem; }
   .story-signature { margin-top: 2rem; }
+  .founders { grid-template-columns: 1fr; gap: 2rem; }
+  .founders-photo img { height: min(75vw, 540px); }
+  .founders h3 { max-width: 580px; margin-bottom: 2rem; }
   .experience-head h2 { font-size: clamp(4rem, 10.5vw, 6.5rem); }
   .experience-gallery { grid-template-columns: 1fr 1fr; }
   .experience-gallery figure { height: 470px; }
@@ -208,11 +227,16 @@ html[lang='ru'] .story-heading h2, html[lang='ru'] .origin h2, html[lang='ru'] .
   .interlude { min-height: 67px; font-size: .96rem; }
   .story-heading h2 { font-size: clamp(3.5rem, 10.5vw, 5rem); }
   .story-copy p { font-size: 1.17rem; }
+  .founders-photo img { height: min(83vw, 410px); }
+  .founders h3 { font-size: clamp(3rem, 10vw, 4.6rem); }
+  .founders-person { align-items: flex-start; flex-direction: column; gap: .3rem; }
   .experience-head h2 { font-size: clamp(3.7rem, 10.5vw, 5rem); }
   .experience-gallery { grid-template-columns: 1fr; gap: .4rem; }
   .experience-gallery figure, .experience-gallery figure:first-child { grid-column: auto; height: 430px; }
   .experience-gallery figure:nth-child(2) { height: 370px; }
   .experience-gallery figure:nth-child(3) { height: 390px; }
+  .coffee-pair { grid-template-columns: 1fr; gap: .4rem; margin-top: .4rem; }
+  .coffee-pair figure { height: min(88vw, 400px); }
   .origin h2 { font-size: clamp(3.5rem, 10.5vw, 5rem); }
   .visit h2 { font-size: clamp(3.8rem, 10.8vw, 5.3rem); }
   .visit-board { grid-template-columns: 1fr; gap: 1.5rem; }
@@ -227,5 +251,5 @@ html[lang='ru'] .story-heading h2, html[lang='ru'] .origin h2, html[lang='ru'] .
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .pill-link, .experience-gallery img, .header-visit, .back-to-top { transition: none; }
+  .pill-link, .experience-gallery img, .coffee-pair img, .header-visit, .back-to-top { transition: none; }
 }

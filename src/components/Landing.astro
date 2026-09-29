@@ -29,6 +29,10 @@ const businessData = {
   description: t.seoDescription,
   image: `${siteUrl}/images/interior-pandora.webp`,
   logo: logoImage,
+  founder: [
+    { '@type': 'Person', name: 'Mario Lozano' },
+    { '@type': 'Person', name: 'Consuelo García' },
+  ],
   url: `${siteUrl}/`,
   sameAs: [instagramUrl],
   hasMap: mapUrl,
@@ -114,6 +118,10 @@ const pageData = {
             <figure><img src="/images/ritual-pandora.webp" alt={t.coffeeImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>02</span>{t.caption2}</figcaption></figure>
             <figure><img src="/images/espacio-pandora.webp" alt={t.spaceImageAlt} width="1550" height="2693" loading="lazy" /><figcaption><span>03</span>{t.caption3}</figcaption></figure>
           </div>
+          <div class="coffee-pair" aria-label={t.coffeeGalleryLabel}>
+            <figure><img src="/images/cafe-vertido-pandora.webp" alt={t.coffeePourAlt} width="1920" height="1280" loading="lazy" /><figcaption>{t.coffeePourCaption}</figcaption></figure>
+            <figure><img src="/images/cafe-servido-pandora.webp" alt={t.coffeeServeAlt} width="1920" height="1280" loading="lazy" /><figcaption>{t.coffeeServeCaption}</figcaption></figure>
+          </div>
         </section>
 
         <section class="story" id="historia" aria-labelledby="story-title">
@@ -123,6 +131,15 @@ const pageData = {
             <div class="story-grid">
               <figure class="story-art"><img src="/images/fabula-pandora.webp" alt={t.artworkAlt} width="1161" height="1020" loading="lazy" /><figcaption>{t.artworkCaption}</figcaption></figure>
               <div class="story-copy"><p>{t.storyText}</p><span class="story-signature">La Pandora <span aria-hidden="true">✳</span></span></div>
+            </div>
+            <div class="founders" aria-labelledby="founders-title">
+              <figure class="founders-photo"><img src="/images/socios-consuelo-mario.webp" alt={t.foundersImageAlt} width="1920" height="1280" loading="lazy" /></figure>
+              <div class="founders-copy">
+                <p class="founders-eyebrow">{t.foundersEyebrow}</p>
+                <h3 id="founders-title">{t.foundersTitle}</h3>
+                <div class="founders-person"><strong>Mario Lozano</strong><span>{t.marioRole}</span></div>
+                <div class="founders-person"><strong>Consuelo García</strong><span>{t.consueloRole}</span></div>
+              </div>
             </div>
           </div>
         </section>

@@ -1,0 +1,18 @@
+---
+import { content, locales, type Locale } from '../data/content';
+import { homePaths, visitPaths } from '../data/site';
+interface Props { locale: Locale; page?: 'home' | 'visit' }
+const { locale, page = 'home' } = Astro.props;
+const t = content[locale];
+const paths = page === 'home' ? homePaths : visitPaths;
+---
+<header class:list={['site-header', { 'inner-header': page === 'visit' }]} aria-label="La Pandora Coffee">
+  <span class="header-location">{t.locationValue}</span>
+  <a class="brand" href={homePaths[locale]} aria-label={`La Pandora Coffee, ${t.home}`}><img src="/images/logo-oficial.jpg" alt="La Pandora Coffee" width="723" height="723" /></a>
+  <div class="header-actions">
+    <nav class="languages" aria-label="Language / Idioma / Язык">
+      {locales.map((lang) => <a href={paths[lang]} lang={lang} hreflang={lang} aria-current={locale === lang ? 'page' : undefined}>{lang.toUpperCase()}</a>)}
+    </nav>
+    <a class="header-visit" href={page === 'home' ? '#visita' : '#contacto'}>{t.visit}<span aria-hidden="true">↗</span></a>
+  </div>
+</header>

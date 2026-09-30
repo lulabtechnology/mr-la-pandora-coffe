@@ -1,0 +1,14 @@
+---
+import { content, type Locale } from '../data/content';
+import { business } from '../data/site';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = content[locale];
+---
+<div class="contact-links">
+  {business.contacts.map(({ display, telephone }) => (
+    <div class="contact-row">
+      <a class="contact-number" href={`tel:${telephone}`} aria-label={`${t.call} ${display}`}>{display}<span aria-hidden="true">↗</span></a>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import ContactLinks from './ContactLinks.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
+import { content, type Locale } from '../data/content';
+import { business, homePaths } from '../data/site';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = content[locale];
+const v = t.visitPage;
+---
+<BaseLayout locale={locale} title={v.title} description={v.description} page="visit" questions={t.questions}>
+  <SiteHeader locale={locale} page="visit" />
+  <main id="main" class="location-page">
+    <div class="section-wrap">
+      <nav class="breadcrumbs" aria-label={t.home}><a href={homePaths[locale]}>{t.home}</a><span aria-hidden="true">/</span><span aria-current="page">{v.nav}</span></nav>
+      <section class="location-intro" aria-labelledby="location-title">
+        <p class="location-eyebrow">La Pandora Coffee · {v.eyebrow}</p>
+        <h1 id="location-title">{v.heading}</h1><p class="location-lead">{v.intro}</p>
+      </section>
+      <section class="location-grid" id="contacto" aria-labelledby="directions-title">
+        <div class="location-information">
+          <h2 id="directions-title">{v.directionsTitle}</h2><p>{v.directionsText}</p>
+          <dl class="location-facts">
+            <div><dt>{t.location}</dt><dd>{t.locationValue}</dd></div>
+            <div><dt>{t.hours}</dt><dd>{t.hours1}<br />{t.hours2}</dd></div>
+            <div><dt>{t.contact}</dt><dd><ContactLinks locale={locale} /></dd></div>
+          </dl>
+          <p class="contact-note">{v.contactNote}</p>
+          <div class="location-actions"><a class="pill-link pill-dark" href={business.mapUrl} target="_blank" rel="noopener noreferrer">{t.maps}<span aria-hidden="true">↗</span></a><a class="under-link" href={business.instagram} target="_blank" rel="noopener noreferrer">Instagram<span aria-hidden="true">↗</span></a></div>
+        </div>
+        <figure class="location-photo"><ResponsiveImage name="espacio" alt={v.imageAlt} width={1050} height={1067} sizes="(max-width: 900px) 90vw, 45vw" loading="eager" /></figure>
+      </section>
+      <section class="location-origin" aria-labelledby="coffee-title"><h2 id="coffee-title">{v.coffeeTitle}</h2><div><p>{v.coffeeText}</p><p>{v.coffeeNote}</p><a class="under-link" href={`${homePaths[locale]}#historia`}>{v.storyLink}<span aria-hidden="true">↗</span></a></div></section>
+      <section class="location-faq" aria-labelledby="faq-title"><h2 id="faq-title">{v.faqTitle}</h2><div class="question-grid">{t.questions.map(({ question, answer }) => <article class="question"><h3>{question}</h3><p>{answer}</p></article>)}</div></section>
+    </div>
+  </main>
+  <SiteFooter locale={locale} />
+</BaseLayout>

@@ -1,103 +1,22 @@
 ---
-import '@fontsource/dm-sans/400.css';
-import '@fontsource/dm-sans/500.css';
-import '@fontsource/dm-sans/600.css';
-import '@fontsource/dm-sans/700.css';
-import '@fontsource/instrument-serif/400.css';
-import '@fontsource/instrument-serif/400-italic.css';
-import '../styles/global.css';
-import { content, locales, type Locale } from '../data/content';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import ContactLinks from './ContactLinks.astro';
+import ResponsiveImage from './ResponsiveImage.astro';
+import { content, type Locale } from '../data/content';
+import { business, visitPaths } from '../data/site';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const t = content[locale];
-const paths: Record<Locale, string> = { es: '/', en: '/en/', ru: '/ru/' };
-const siteUrl = (import.meta.env.PUBLIC_SITE_URL || 'https://lapandoracoffee.com').replace(/\/$/, '');
-const canonical = `${siteUrl}${paths[locale]}`;
-const logoImage = `${siteUrl}/images/logo-oficial.jpg`;
-const socialImage = `${siteUrl}/images/taza-pandora.webp`;
-const mapUrl = 'https://www.google.com/maps/search/?api=1&query=La+Pandora+Coffee%2C+Calle+50%2C+Panama';
-const instagramUrl = 'https://www.instagram.com/lapandoracoffee/';
-const homeLabel = { es: 'La Pandora Coffee, inicio', en: 'La Pandora Coffee, home', ru: 'La Pandora Coffee, главная' }[locale];
-const topLabel = { es: 'Volver arriba', en: 'Back to top', ru: 'Наверх' }[locale];
-const businessData = {
-  '@context': 'https://schema.org',
-  '@type': 'CafeOrCoffeeShop',
-  '@id': `${siteUrl}/#business`,
-  name: 'La Pandora Coffee',
-  alternateName: ['La Pandora', 'Mr La Pandora'],
-  description: t.seoDescription,
-  image: `${siteUrl}/images/interior-pandora.webp`,
-  logo: logoImage,
-  founder: [
-    { '@type': 'Person', name: 'Mario Lozano' },
-    { '@type': 'Person', name: 'Consuelo García' },
-  ],
-  url: `${siteUrl}/`,
-  sameAs: [instagramUrl],
-  hasMap: mapUrl,
-  address: { '@type': 'PostalAddress', streetAddress: 'Calle 50', addressLocality: 'Ciudad de Panamá', addressCountry: 'PA' },
-  geo: { '@type': 'GeoCoordinates', latitude: 8.991044, longitude: -79.511425 },
-  openingHoursSpecification: [
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '08:00', closes: '21:00' },
-    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Sunday', opens: '08:00', closes: '16:00' },
-  ],
-};
-const pageData = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': `${canonical}#webpage`,
-  url: canonical,
-  name: t.seoTitle,
-  description: t.seoDescription,
-  inLanguage: locale,
-  about: { '@id': `${siteUrl}/#business` },
-};
+const mapUrl = business.mapUrl;
+const instagramUrl = business.instagram;
 ---
-
-<!doctype html>
-<html lang={locale}>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#1b1512" />
-    <meta name="description" content={t.seoDescription} />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content={locale === 'es' ? 'es_PA' : locale === 'en' ? 'en_US' : 'ru_RU'} />
-    <meta property="og:site_name" content="La Pandora Coffee" />
-    <meta property="og:title" content={t.seoTitle} />
-    <meta property="og:description" content={t.seoDescription} />
-    <meta property="og:image" content={socialImage} />
-    <meta property="og:image:alt" content={t.socialImageAlt} />
-    <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="canonical" href={canonical} />
-    {locales.map((lang) => <link rel="alternate" hreflang={lang} href={`${siteUrl}${paths[lang]}`} />)}
-    <link rel="alternate" hreflang="x-default" href={`${siteUrl}/`} />
-    <link rel="icon" type="image/jpeg" href="/images/logo-oficial.jpg" />
-    {locale !== 'ru' && <link rel="preload" as="font" type="font/woff2" href="/fonts/bricolage-grotesque-latin-wght.woff2" crossorigin="anonymous" />}
-    <link rel="preload" as="image" href="/images/hero-panorama-editorial.png" media="(min-width: 761px)" />
-    <link rel="preload" as="image" href="/images/taza-pandora.webp" media="(max-width: 760px)" />
-    <title>{t.seoTitle}</title>
-    <script type="application/ld+json" set:html={JSON.stringify([businessData, pageData])} />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">{t.skip}</a>
-    <div class="site-shell">
-      <header class="site-header" aria-label="La Pandora Coffee">
-        <span class="header-location">{t.locationValue}</span>
-        <a class="brand" href={paths[locale]} aria-label={homeLabel}><img src="/images/logo-oficial.jpg" alt="La Pandora Coffee" width="723" height="723" /></a>
-        <div class="header-actions">
-          <div class="languages" aria-label="Language / Idioma / Язык">
-            {locales.map((lang) => <a href={paths[lang]} lang={lang} hreflang={lang} aria-current={locale === lang ? 'page' : undefined}>{lang.toUpperCase()}</a>)}
-          </div>
-          <a class="header-visit" href="#visita">{t.visit}<span aria-hidden="true">↗</span></a>
-        </div>
-      </header>
-
+<BaseLayout locale={locale} title={t.seoTitle} description={t.seoDescription} questions={t.questions}>
+  <SiteHeader locale={locale} />
       <main id="main">
         <section class="hero" aria-labelledby="hero-title">
-          <div class="hero-photo"><picture><source media="(min-width: 761px)" srcset="/images/hero-panorama-editorial.png" /><img src="/images/taza-pandora.webp" alt={t.heroImageAlt} width="1050" height="1400" fetchpriority="high" /></picture></div>
+          <div class="hero-photo"><picture><source media="(min-width: 761px)" srcset="/images/optimized/hero-960.webp 960w, /images/optimized/hero-1440.webp 1440w, /images/optimized/hero-1920.webp 1920w" sizes="100vw" /><img src="/images/optimized/taza-640.webp" srcset="/images/optimized/taza-640.webp 640w, /images/optimized/taza-960.webp 960w" sizes="100vw" alt={t.heroImageAlt} width="1050" height="1400" fetchpriority="high" /></picture></div>
           <div class="hero-shade" aria-hidden="true"></div>
           <div class="hero-content">
             <p class="hero-overline">{t.heroEyebrow}</p>
@@ -111,16 +30,19 @@ const pageData = {
 
         <div class="interlude" aria-hidden="true"><span>{t.interlude}</span><span class="interlude-mark">✳</span><span>{t.interlude}</span></div>
 
+        <nav class="section-nav section-wrap" aria-label={t.sectionNav}>
+          <a href="#experiencia">{t.navSpace}</a><a href="#historia">{t.navStory}</a><a href="#origen">{t.navOrigin}</a><a href={visitPaths[locale]}>{t.visitPage.nav}<span aria-hidden="true">↗</span></a>
+        </nav>
         <section class="experience" id="experiencia" aria-labelledby="experience-title">
           <div class="section-wrap experience-intro"><div class="section-label"><span>01 / 04</span><span>{t.experienceEyebrow}</span></div><div class="experience-head"><h2 id="experience-title">{t.experienceTitle}</h2><p>{t.experienceText}</p></div></div>
           <div class="experience-gallery">
-            <figure><img src="/images/interior-pandora.webp" alt={t.experienceImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>01</span>{t.caption1}</figcaption></figure>
-            <figure><img src="/images/ritual-pandora.webp" alt={t.coffeeImageAlt} width="1350" height="2398" loading="lazy" /><figcaption><span>02</span>{t.caption2}</figcaption></figure>
-            <figure><img src="/images/espacio-pandora.webp" alt={t.spaceImageAlt} width="1550" height="2693" loading="lazy" /><figcaption><span>03</span>{t.caption3}</figcaption></figure>
+            <figure><ResponsiveImage name="interior" alt={t.experienceImageAlt} width={1350} height={2398} sizes="(max-width: 500px) 100vw, (max-width: 760px) 100vw, 33vw" /><figcaption><span>01</span>{t.caption1}</figcaption></figure>
+            <figure><ResponsiveImage name="ritual" alt={t.coffeeImageAlt} width={1350} height={2398} sizes="(max-width: 500px) 100vw, (max-width: 760px) 50vw, 33vw" /><figcaption><span>02</span>{t.caption2}</figcaption></figure>
+            <figure><ResponsiveImage name="espacio" alt={t.spaceImageAlt} width={1050} height={1067} sizes="(max-width: 500px) 100vw, (max-width: 760px) 50vw, 33vw" /><figcaption><span>03</span>{t.caption3}</figcaption></figure>
           </div>
           <div class="coffee-pair" aria-label={t.coffeeGalleryLabel}>
-            <figure><img src="/images/cafe-vertido-pandora.webp" alt={t.coffeePourAlt} width="1920" height="1280" loading="lazy" /><figcaption>{t.coffeePourCaption}</figcaption></figure>
-            <figure><img src="/images/cafe-servido-pandora.webp" alt={t.coffeeServeAlt} width="1920" height="1280" loading="lazy" /><figcaption>{t.coffeeServeCaption}</figcaption></figure>
+            <figure><ResponsiveImage name="vertido" alt={t.coffeePourAlt} width={1920} height={1280} sizes="(max-width: 500px) 100vw, 50vw" /><figcaption>{t.coffeePourCaption}</figcaption></figure>
+            <figure><ResponsiveImage name="servido" alt={t.coffeeServeAlt} width={1920} height={1280} sizes="(max-width: 500px) 100vw, 50vw" /><figcaption>{t.coffeeServeCaption}</figcaption></figure>
           </div>
         </section>
 
@@ -129,11 +51,11 @@ const pageData = {
             <div class="section-label"><span>02 / 04</span><span>{t.storyEyebrow}</span></div>
             <div class="story-heading"><h2 id="story-title">{t.storyTitle1}<br /><em>{t.storyTitle2}</em></h2></div>
             <div class="story-grid">
-              <figure class="story-art"><img src="/images/fabula-pandora.webp" alt={t.artworkAlt} width="1161" height="1020" loading="lazy" /><figcaption>{t.artworkCaption}</figcaption></figure>
+              <figure class="story-art"><ResponsiveImage name="fabula" alt={t.artworkAlt} width={1161} height={1020} sizes="(max-width: 760px) 90vw, 50vw" /><figcaption>{t.artworkCaption}</figcaption></figure>
               <div class="story-copy"><p>{t.storyText}</p><span class="story-signature">La Pandora <span aria-hidden="true">✳</span></span></div>
             </div>
             <div class="founders" aria-labelledby="founders-title">
-              <figure class="founders-photo"><img src="/images/socios-consuelo-mario.webp" alt={t.foundersImageAlt} width="1920" height="1280" loading="lazy" /></figure>
+              <figure class="founders-photo"><ResponsiveImage name="socios" alt={t.foundersImageAlt} width={1920} height={1280} sizes="(max-width: 760px) 90vw, 60vw" /></figure>
               <div class="founders-copy">
                 <p class="founders-eyebrow">{t.foundersEyebrow}</p>
                 <h3 id="founders-title">{t.foundersTitle}</h3>
@@ -146,18 +68,17 @@ const pageData = {
 
         <section class="origin" id="origen" aria-labelledby="origin-title">
           <div class="origin-copy"><div class="section-label"><span>03 / 04</span><span>{t.originEyebrow}</span></div><h2 id="origin-title">{t.originTitle}</h2><p>{t.originText}</p><span class="origin-note">{t.originNote}</span></div>
-          <figure class="origin-visual"><img src="/images/empaque-pandora.webp" alt={t.originImageAlt} width="1200" height="1600" loading="lazy" /></figure>
+          <figure class="origin-visual"><ResponsiveImage name="empaque" alt={t.originImageAlt} width={1200} height={1600} sizes="(max-width: 760px) 100vw, 44vw" /></figure>
         </section>
 
         <section class="visit section-wrap" id="visita" aria-labelledby="visit-title">
           <div class="section-label"><span>04 / 04</span><span>{t.visitEyebrow}</span></div>
           <div class="visit-head"><h2 id="visit-title">{t.visitTitle}</h2><p>{t.visitText}</p></div>
-          <div class="visit-board"><div class="visit-detail"><span>{t.location}</span><p>{t.locationValue}</p></div><div class="visit-detail"><span>{t.hours}</span><p>{t.hours1}<br />{t.hours2}</p></div><div class="visit-actions"><a class="pill-link pill-dark" href={mapUrl} target="_blank" rel="noopener noreferrer">{t.maps}<span aria-hidden="true">↗</span></a><a class="under-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">{t.instagram}<span aria-hidden="true">↗</span></a></div></div>
+          <div class="visit-board"><div class="visit-detail"><span>{t.location}</span><p>{t.locationValue}</p><p class="parking-note">{t.parking}</p></div><div class="visit-detail"><span>{t.hours}</span><p>{t.hours1}<br />{t.hours2}</p></div><div class="visit-detail visit-contact"><span>{t.contact}</span><ContactLinks locale={locale} /></div><div class="visit-actions"><a class="pill-link pill-dark" href={mapUrl} target="_blank" rel="noopener noreferrer">{t.maps}<span aria-hidden="true">↗</span></a><a class="under-link" href={instagramUrl} target="_blank" rel="noopener noreferrer">{t.instagram}<span aria-hidden="true">↗</span></a></div></div>
+          <p class="visit-more"><a class="under-link" href={visitPaths[locale]}>{t.visitDetails}<span aria-hidden="true">↗</span></a></p>
           <div class="questions" aria-labelledby="questions-title"><h3 id="questions-title">{t.questionsTitle}</h3><div class="question-grid">{t.questions.map(({ question, answer }) => <article class="question"><h4>{question}</h4><p>{answer}</p></article>)}</div></div>
         </section>
       </main>
 
-      <footer class="footer"><div class="footer-inner"><img src="/images/logo-oficial.jpg" alt="La Pandora Coffee" width="723" height="723" loading="lazy" /><p>{t.footerLine}</p><div class="footer-bottom"><span>© {new Date().getFullYear()} La Pandora Coffee. {t.rights}</span><span>Ciudad de Panamá, Panamá</span><span>{t.credit} <a href="https://lulabtech.com/">LulabTech</a></span><a class="back-to-top" href="#main" aria-label={topLabel}>↑</a></div></div></footer>
-    </div>
-  </body>
-</html>
+  <SiteFooter locale={locale} />
+</BaseLayout>

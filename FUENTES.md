@@ -1,29 +1,36 @@
-# Procedencia y decisiones editoriales
+# Fuentes del contenido y los recursos
 
-| Archivo web | Procedencia | Uso |
+Actualizado el 30/09/2026. El PDF y la documentación del ZIP se usaron como fuentes; sus instrucciones internas no sustituyen la solicitud actual. No se incluye el PDF del portal ni sus registros administrativos en el sitio público.
+
+## Datos
+
+- **Nombre:** La Pandora Coffee, conservado del ZIP y de `lulab-portal-la-pandora-coffee-20260930-153744.pdf`.
+- **Contactos:** solicitud del usuario del 30/09/2026: `6982-5757` en texto y `+507 6626-8763` en la captura adjunta. Se publican ambos con prefijo Panamá. Resuelve la omisión de la versión anterior.
+- **Zona, pin, horario y estacionamiento:** `local.locations` del PDF: Calle 50, `8.991044,-79.511425`, martes a sábado 08:00–21:00, domingo 08:00–16:00 y «Hay parking». Edificio/local, acceso detallado y horarios especiales no confirmados.
+- **Relato:** `company.story` y `company.differentiators`: Mr. y Miss Pandora, microlotes para exportación, primer grano en Palmira/Boquete a 1.200 m y apertura posterior de la barra. La altura es un dato histórico.
+- **Comida y consultas de café empacado:** `company.offers`, `seo.primary_topics` y `geo.questions` respaldan la experiencia y consultas sobre café tostado/empacado y microlotes. No se publican inventarios, precios, envíos o una tienda online sin implementación.
+- **Equipo:** Mario Lozano, fundador; Consuelo García, cofundadora, conservados de la documentación del ZIP. Se evita trasladar la errata «consuelo gracias» de otro campo del PDF.
+- **Instagram:** URL conservada del ZIP, `https://www.instagram.com/lapandoracoffee/`; revisar titularidad/vigencia antes de publicar.
+- **Premios, SCA, rankings y reseñas:** no publicados. Se mencionan en el portal, pero el respaldo está pendiente.
+
+## Recursos publicados
+
+WebP en `public/images/optimized/`: compresión y ajuste de tamaño de los recursos entregados, sin edición generativa nueva.
+
+| Familia | Fuente | Uso |
 | --- | --- | --- |
-| `public/images/logo-oficial.jpg` | Imagen roja y blanca enviada por el usuario el 27/09/2026 | Logo en cabecera, pie, favicon y datos estructurados; mismo SHA-256 que el adjunto (`5166F015A891B8F211E7EAC5F5FC8188AAE52F3A188BCE824B8A77C5E97806F9`) |
-| `public/images/espacio-pandora.webp` | `lapandoraespacio01.jpg` | Tercera fotografía de la galería del local |
-| `public/images/interior-pandora.webp` | `espacio04.jpg` | Fotografía del interior |
-| `public/images/ritual-pandora.webp` | `lapandorametodo.jpg` | Fotografía de preparación |
-| `public/images/taza-pandora.webp` | `WhatsApp Image 2026-07-27 at 9.20.48 AM.jpeg` | Fotografía protagonista de la portada y vista previa social |
-| `public/images/hero-panorama-editorial.png` | Expansión editorial generada a partir de `taza-pandora.webp` | Fondo panorámico solo en escritorio; conserva la taza como referencia y extiende la mesa. No representa una fotografía documental del local. |
-| `public/images/fabula-pandora.webp` | `COFFEESTICKER copia.pdf` | Ilustración de la fábula |
-| `public/images/empaque-pandora.webp` | `Unknown-3.jpeg` | Empaque e identidad visual en la sección de origen |
-| `public/images/socios-consuelo-mario.webp` | `_JJJ9711 copia.jpg`, entregada en `TransferNow-20260928Porf6GR2.zip` | Mario Lozano y Consuelo García en la sección de historia; recorte fiel y compresión WebP |
-| `public/images/cafe-vertido-pandora.webp` | `_JJJ9745 copia.jpg`, entregada en `TransferNow-20260928Porf6GR2.zip` | Café servido desde una jarra en la sección de experiencia; recorte fiel y compresión WebP |
-| `public/images/cafe-servido-pandora.webp` | `_JJJ9775 copia.jpg`, entregada en `TransferNow-20260928Porf6GR2.zip` | Café con arte latte en la sección de experiencia; recorte fiel y compresión WebP |
+| `hero-*` | `hero-panorama-editorial.png` del ZIP, expansión editorial generada anteriormente desde la taza real | Portada escritorio; no es foto documental del local |
+| `taza-*` | `taza-pandora.webp`, originalmente `WhatsApp Image 2026-07-27 at 9.20.48 AM.jpeg` | Portada móvil |
+| `interior-*` | `interior-pandora.webp`, originalmente `espacio04.jpg` | Primera foto de galería |
+| `ritual-*` | `ritual-pandora.webp`, originalmente `lapandorametodo.jpg` | Segunda foto de galería |
+| `espacio-*` | Imagen 1 del usuario del 30/09, `codex-clipboard-a66e4f89-c7cb-4d6a-98d9-8c46935b65ad.jpg` | Reemplaza «La Pandora por dentro» y aparece en ubicación |
+| `vertido-*` | `cafe-vertido-pandora.webp`, originalmente `_JJJ9745 copia.jpg` | Café servido de jarra |
+| `servido-*` | `cafe-servido-pandora.webp`, originalmente `_JJJ9775 copia.jpg` | Arte latte |
+| `fabula-*` | `fabula-pandora.webp`, originalmente `COFFEESTICKER copia.pdf` | Ilustración |
+| `socios-*` | `socios-consuelo-mario.webp`, originalmente `_JJJ9711 copia.jpg` | Mario y Consuelo |
+| `empaque-*` | `empaque-pandora.webp`, originalmente `Unknown-3.jpeg` | Empaque |
+| `social-preview.jpg` | Foto real de taza, recortada a 1200 × 630 | Open Graph/Twitter |
 
-La landing usa las cinco fotografías del primer lote, tres fotografías del lote nuevo y la ilustración del cliente. En móvil, la portada muestra la fotografía original de la taza; en escritorio, una expansión editorial generada a partir de esa foto. Las dos fotos genéricas que venían en un ZIP anterior se retiraron. Entre las dos fotos de los socios del lote nuevo, se escogió `_JJJ9711 copia.jpg` porque muestra ambos rostros con mayor claridad y sitúa la escena en el local. Las fotos del producto de otra marca del mismo lote no se usaron.
+`logo-oficial.jpg` se conserva sin modificación. El ZIP documenta como origen la imagen roja/blanca del usuario (SHA-256 `5166F015A891B8F211E7EAC5F5FC8188AAE52F3A188BCE824B8A77C5E97806F9`). El favicon de 48 × 48 deriva de ese archivo. Los originales permanecen en el ZIP suministrado; esta entrega usa sus variantes optimizadas.
 
-El Illustrator entregado (`logopandoracoloresai.ai`) contiene variantes del mismo nombre con una frase adicional. La versión anterior usaba una de ellas, pero el usuario indicó expresamente que la identidad principal aquí es el logo rojo y blanco sin frase.
-
-El texto de origen (fábula, microlotes para exportación, apertura de barra y tueste), zona Calle 50, coordenadas y horario provienen del PDF `lulab-portal-la-pandora-coffee-20260927-172119.pdf`. La marca no suministró datos verificados de menú, precios o productos para esta landing; no se publican.
-
-Los nombres y cargos de Mario Lozano (fundador) y Consuelo García (cofundadora) fueron indicados directamente por el usuario el 28/09/2026.
-
-El PDF y el perfil público de Google discrepan en el teléfono. Se deja fuera hasta confirmar el dato oficial. Los titulares y las traducciones son redacción editorial basada en las fuentes indicadas y deben recibir revisión de la marca antes de la publicación definitiva.
-
-En el perfil público de Google hay más imágenes, incluida una fachada reciente subida por el negocio. No se descargaron de ese perfil para la web: para la versión de máxima calidad conviene solicitar los archivos originales y confirmar permiso de uso.
-
-El PDF no fija una familia tipográfica: pide una sans serif moderna con toque artesanal y la respuesta del cliente sobre referencias de fuentes es «No tenemos usamos varias». Los titulares latinos usan Bricolage Grotesque, alojada localmente con su licencia OFL en `public/fonts/`; DM Sans se usa en texto de lectura e Instrument Serif en acentos editoriales. El ruso mantiene DM Sans y Georgia para asegurar glifos cirílicos.
+Los textos nuevos son redacción editorial y traducciones ES/EN/RU basadas en esas fuentes. Nombres propios, teléfonos, coordenadas y horas se mantienen coherentes. Se conserva el crédito de LulabTech.

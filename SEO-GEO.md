@@ -1,55 +1,66 @@
-# SEO y GEO · La Pandora Coffee
+# SEO y GEO: cambios y activación
 
-Investigación y ejecución: 27 de septiembre de 2026. Esta es una estrategia para una **landing de marca y visita al local**, sin menú ni catálogo. Las observaciones de búsqueda son exploratorias: no son volúmenes medidos ni posiciones fijas. La ubicación del usuario, historial y fecha pueden alterar el orden de resultados.
+Actualizado el 30/09/2026. Trabajo sobre el sitio real: contenido útil, entidad coherente, HTML estático y fotografías más ligeras. Los grupos siguientes expresan intención; no son volúmenes ni posiciones de búsqueda medidos.
 
-## Búsquedas a trabajar
+## Intenciones cubiertas
 
-| Prioridad | Consulta / grupo | Intención | Qué aporta la página |
-| --- | --- | --- | --- |
-| 1 | `La Pandora Coffee`, `La Pandora Coffee Panamá`, `Pandora Coffee Panamá`, `Mr La Pandora` | Encontrar la marca | Nombre consistente en título, cabecera visible, texto, datos estructurados, redes y dominio |
-| 1 | `café en Calle 50`, `cafetería Calle 50 Panamá`, `coffee shop Calle 50 Panama City` | Visitar una cafetería cercana | Zona en título, descripción, contenido visible, mapa, horario y marcado local |
-| 2 | `café en Ciudad de Panamá`, `cafeterías en Panamá`, `café de especialidad Panamá` | Descubrir opciones | Historia y propósito reales, café panameño y ubicación; requerirá reputación y menciones externas para competir |
-| 2 | `Panamanian coffee shop Panama City`, `coffee on Calle 50` | Visitantes angloparlantes | Página inglesa indexable con URL propia y `hreflang` |
-| 3 | `Pandora` a secas | Ambigua; joyería y otras entidades | Conviene desambiguar con **La Pandora Coffee + Panamá + cafetería**; no se promete competir por esa palabra aislada |
+| Intención | Contenido útil |
+| --- | --- |
+| La Pandora Coffee Panamá / Mr La Pandora | Nombre consistente, historia, identidad y contactos |
+| Cafetería Calle 50 / coffee shop Calle 50 Panama City | Página de visita: zona, pin, horario, estacionamiento y teléfonos |
+| Café de origen panameño de La Pandora | Historia de microlotes y del primer grano en Palmira/Boquete a 1.200 m |
+| Comida, café empacado, microlotes | Respuestas concretas y contacto para disponibilidad vigente |
+| Visitantes angloparlantes y rusoparlantes | Versiones completas con URL propias y hreflang entre páginas equivalentes |
 
-La frase `café de especialidad` debe usarse solo donde encaje con la oferta real. El PDF pide evitar ciertos clichés y la página no debe repetir palabras clave artificialmente.
+## Implementación
 
-## Referentes observados
+Los dos teléfonos fueron autorizados por el usuario el 30/09/2026. Ambos están en texto y enlaces `tel:`. El número escrito primero se usa como `telephone` en `CafeOrCoffeeShop`; los dos figuran como `ContactPoint`. No se dedujo que uno sustituya al otro.
 
-| Fuente | Hallazgo verificable | Aprendizaje |
+El negocio mantiene un único `@id` bajo el dominio canónico. `WebSite`, páginas y breadcrumbs referencian la misma entidad. Se incluyen nombre, variantes existentes, logo, fotos reales, fundadores, Instagram, dirección de zona, coordenadas y horario. No se añadieron premios, puntuaciones SCA, valoraciones, precios o `Offer` sin respaldo.
+
+La dirección completa sigue pendiente. Calle 50 y el pin `8.991044,-79.511425` provienen del PDF; no se inventó edificio/local. El enlace Maps abre ese pin en lugar de una búsqueda genérica por nombre.
+
+La nueva página de ubicación responde a una necesidad distinta del inicio: planificar una visita y encontrar contacto/acceso. El inicio conserva la historia. Sus enlaces son HTML normales. Siete respuestas cubren dudas concretas. Palmira/Boquete a 1.200 m se presenta como **primer grano del proyecto**, no como propiedad de todos los lotes actuales. Menú, lote disponible y días festivos se consultan con el equipo.
+
+`FAQPage` organiza las respuestas para consumidores de Schema.org y reproduce exactamente el contenido visible. **No se promete un resultado enriquecido de preguntas en Google:** Google retiró esa función en 2026. [Registro oficial de cambios](https://developers.google.com/search/updates).
+
+Google explica que sus funciones generativas se apoyan en SEO, contenido útil y datos locales coherentes. No hay un Schema especial que garantice citas de IA; `llms.txt` no mejora posiciones en Google. Se prioriza contenido sustantivo. [Guía de optimización para IA](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), [funciones de IA y sitios web](https://developers.google.com/search/docs/appearance/ai-features).
+
+## Rastreo y presentación
+
+- Seis páginas estáticas, títulos/descripciones propios, idioma HTML y un H1 por página.
+- Canonical absoluto y hreflang recíprocos entre páginas equivalentes; x-default al español de cada grupo.
+- Sitemap con las seis URL y alternancias; robots generado desde la misma configuración de dominio.
+- Sin lastmod ficticio, redirección automática de idioma ni páginas masivas para variantes de palabras clave.
+- Open Graph/Twitter completos, imagen social de 1200 × 630 y favicon de 48 × 48.
+- Todo el contenido es legible sin JavaScript de cliente.
+
+## Fotografías y rendimiento
+
+Se sirven WebP responsive con dimensiones, alt, srcset y sizes. La portada se precarga según pantalla y mantiene prioridad alta. Las fotos secundarias usan carga diferida, excepto la primera de la página de ubicación. Las fuentes son locales, con subconjuntos latinos y font-display swap.
+
+| Portada | Bytes | Reducción frente al PNG original |
 | --- | --- | --- |
-| [Café Unido: nuestra historia](https://www.cafeunido.com/pages/nosotros) y [tiendas](https://www.cafeunido.com/pages/tiendas) | Historia de marca y páginas de ubicaciones | Relato propio más información útil de visita |
-| [Guía EatsPanama de cafés en Ciudad de Panamá](https://www.eatspanama.com/guides/best-coffee-panama-city/) | Directorio editorial actualizado en 2026; menciona a Café Unido y locales de Calle 50 | Las menciones editoriales y la precisión de ubicación importan |
-| [Guía Sugarbmd 2026](https://sugarbmd.com/las-mejores-cafeterias-de-especialidad-en-panama/) | Incluye Leto, Sisu, Mentiritas Blancas y Bungla; la búsqueda en esa página no mostró La Pandora | Oportunidad de conseguir cobertura real, sin afirmar que ya aparece allí |
-| [Guía FLTR Magazine](https://fltrmagazine.com/2026/06/16/best-specialty-coffee-shops-panama-city/) | Repite nombres como Café Unido, Sisu, Leto y Cabrera | La autoridad fuera del sitio influye en búsquedas generales |
+| Original | 2.559.741 | — |
+| 960 px | 91.430 | 96,4% |
+| 1440 px | 175.642 | 93,1% |
+| 1920 px | 244.490 | 90,4% |
 
-No se puede declarar un “top” universal a partir de estas guías ni asegurar que Café Unido ocupa el primer puesto para todas las consultas. Para medir posición y clics reales se necesita Search Console y seguimiento de búsquedas geolocalizadas.
+La nueva foto reemplaza la tercera imagen de galería y también ilustra la ubicación. Se retiraron su zoom 1.72 y el filtro anterior. Estas mejoras reducen transferencia; **no equivalen a un puntaje Lighthouse ni garantizan Core Web Vitals**.
 
-## Implementado en este ZIP
+## Verificación
 
-- Texto visible y concreto sobre la historia, el café panameño, la zona, horario y respuestas a preguntas frecuentes en los tres idiomas. La portada identifica «café en Panamá» y «cafetería en Calle 50» sin repetir términos de búsqueda de forma artificial.
-- URL canónica `https://lapandoracoffee.com/` y páginas alternativas `/en/`, `/ru/`; etiquetas `hreflang` y sitemap con URLs absolutas.
-- `robots.txt` público y sitemap en `/sitemap.xml`.
-- Metadatos únicos por idioma, Open Graph con la fotografía propia de la taza, y `CafeOrCoffeeShop`/`WebPage` en JSON-LD. El logo rojo y blanco permanece en el marcado de la entidad.
-- Una sola fuente de entidad en los datos estructurados: nombre, nombres alternativos de marca, dirección de zona, coordenadas y horarios. No se incluyó teléfono porque hay dos números distintos en las fuentes.
-- Crédito visible y enlace normal a [LulabTech](https://lulabtech.com/) en el pie.
+`pnpm check` y compilación estática completados. `pnpm check:seo` revisa el HTML final de las seis rutas, contactos, concordancia de preguntas visibles/Schema, recursos, enlaces, metadatos, sitemap y robots. Revisión de navegador a 390 y 1440 px: fotos cargadas, enlaces de teléfono correctos, cero desbordamientos horizontales y errores de página.
 
-Estas señales ayudan a buscadores y sistemas de respuestas a entender la marca. Por sí solas no garantizan indexación, citas en asistentes ni posición. Google explica que los resultados locales dependen de [relevancia, distancia y popularidad](https://support.google.com/business/answer/7091?hl=es-ES), y que los [datos estructurados de empresa local](https://developers.google.com/search/docs/appearance/structured-data/local-business?hl=es) aportan datos, sin garantizar un resultado enriquecido.
+Se comprueba una segunda compilación bajo otro dominio con el mismo auditor. Las pruebas locales no confirman rastreo, indexación, rankings o citas de IA.
 
-## Siguientes acciones tras desplegar
+## Activación después de publicar
 
-1. **Dominio y redirecciones.** Conectar `lapandoracoffee.com` en Vercel; escoger la versión canónica y redirigir la otra variante (`www`/sin `www`). Verificar que el dominio devuelve la landing, `robots.txt` y `sitemap.xml`.
-2. **Search Console.** Verificar el dominio, enviar `https://lapandoracoffee.com/sitemap.xml`, inspeccionar la URL principal y seguir consultas/clics. Google trata el [sitemap como una pista](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap), no como garantía de indexación.
-3. **Google Business Profile.** Añadir el dominio como sitio web y mantener nombre, categoría, dirección exacta, pin, teléfono y horarios idénticos entre perfil, sitio y otros directorios. Confirmar qué número es oficial antes de publicar uno.
-4. **Prueba de autoridad.** Crear una página de proyecto en LulabTech que enlace **hacia La Pandora**; el crédito del pie de la landing enlaza en el sentido contrario. Proponer a guías gastronómicas y medios una visita o una historia sobre el origen del proyecto, sin comprar enlaces ni prometer cobertura.
-5. **Medición.** Revisar en Search Console consultas de marca y locales durante 4–8 semanas. Ajustar títulos y textos con datos reales de impresiones y clics, no con intuición o repetición de términos.
+1. Conectar dominio, configurar redirección permanente de www y revisar respuestas 200 en páginas, robots y sitemap.
+2. Verificar Search Console, enviar sitemap e inspeccionar URL. Medir marca/local, impresiones, clics y páginas de destino.
+3. Revisar Google Business Profile: dirección completa, pin, sitio, teléfonos y horario. El posicionamiento local también depende de relevancia, distancia y popularidad. [Ayuda oficial](https://support.google.com/business/answer/7091?hl=es).
+4. Mantener datos coherentes en Instagram/directorios reales y buscar cobertura editorial verificable. El crédito a LulabTech es saliente; no representa una mención entrante a La Pandora.
+5. Publicar menú rastreable cuando exista archivo final; mantener disponibilidad y horarios especiales con datos del equipo.
+6. Establecer línea base tras el lanzamiento y revisar en 4–8 semanas. No hay acceso conectado a Analytics, Search Console o Business Profile en esta entrega.
 
-## Datos y materiales aún necesarios
-
-- **Confirmación oficial del logo:** esta entrega usa la imagen roja y blanca que proporcionó el usuario; para producción ideal se necesita el vector o PNG de alta resolución de esta misma versión sin frase.
-- **Teléfono:** PDF `69825757` frente a perfil público de Google `6626-8763`; decidir el correcto.
-- **Dirección postal exacta y enlace directo al perfil de Maps:** el PDF da la zona Calle 50 y coordenadas; el perfil público muestra una dirección más específica. Validar el número/local antes de usarlo en la página y en Schema.
-- **Horarios vigentes, Instagram y traducciones:** validar con la marca.
-- **Fotografías originales adicionales:** fachada reconocible, equipo, barra y tueste, para reforzar autenticidad. Esta versión usa las cinco fotografías y la ilustración entregadas por La Pandora; el panorámico de escritorio es una expansión editorial generada desde la foto original de la taza y está documentado en `FUENTES.md`. El perfil público de Google muestra una fachada reciente, pero conviene pedir el archivo original y permiso de uso en lugar de reutilizar una copia pequeña del perfil.
-- **Pruebas verificables** de premios, valoraciones o afirmaciones técnicas si se desean publicar después.
-- **Acceso** a Vercel/DNS, Search Console y Google Business Profile para ejecutar los pasos externos. No está disponible dentro de este ZIP.
+No se garantiza indexación, ranking ni resultado enriquecido. [Documentación LocalBusiness de Google](https://developers.google.com/search/docs/appearance/structured-data/local-business).

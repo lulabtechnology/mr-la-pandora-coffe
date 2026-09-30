@@ -4,8 +4,36 @@ export const locales: Locale[] = ['es', 'en', 'ru'];
 
 export const content = {
   es: {
+    home: "Inicio",
+    top: "Volver arriba",
+    contact: "Contacto",
+    call: "Llamar al",
+    parking: "Hay estacionamiento",
+    visitDetails: "Ubicación, contacto y preguntas frecuentes",
+    sectionNav: "Explora La Pandora",
+    navSpace: "El espacio",
+    navStory: "La historia",
+    navOrigin: "El origen",
+    visitPage: {
+      "title": "La Pandora Coffee en Calle 50 | Ubicación y contacto",
+      "description": "Visita La Pandora Coffee en Calle 50, Ciudad de Panamá. Consulta ubicación, horario y estacionamiento. Contacto: +507 6982-5757 y +507 6626-8763.",
+      "nav": "Ubicación y contacto",
+      "eyebrow": "Calle 50 · Ciudad de Panamá",
+      "heading": "Tu próxima pausa, en La Pandora.",
+      "intro": "La Pandora Coffee es una cafetería en el área de Calle 50, Ciudad de Panamá: café de origen panameño, comida y un espacio para encontrarse con la cultura del café.",
+      "directionsTitle": "Cómo llegar a La Pandora Coffee",
+      "directionsText": "Abre el pin del local en Google Maps para planificar tu recorrido. Hay estacionamiento; si necesitas una referencia de entrada o información de acceso, llámanos antes de venir.",
+      "contactNote": "Consulta disponibilidad y confirma el horario antes de venir en días festivos.",
+      "coffeeTitle": "Del origen panameño a la barra de Calle 50",
+      "coffeeText": "La historia de La Pandora empezó con microlotes para exportación. El primer grano del proyecto se cosechó en Palmira, Boquete, a 1.200 metros de altura. La apertura de la barra en Ciudad de Panamá llevó ese relato a una experiencia alrededor del café, su tueste y la comida.",
+      "coffeeNote": "Para conocer el origen del lote disponible, su tueste o el método de preparación recomendado, consulta con el equipo del local.",
+      "storyLink": "Conoce nuestra historia",
+      "imageAlt": "Mesa, barra y exhibición de café empacado en La Pandora Coffee, Calle 50",
+      "faqTitle": "Respuestas para planificar tu visita"
+    },
+
     seoTitle: 'La Pandora Coffee | Café en Calle 50, Ciudad de Panamá',
-    seoDescription: 'Conoce La Pandora Coffee, una cafetería en Calle 50, Ciudad de Panamá. Café de origen panameño, cultura e historias en un espacio para encontrarse.',
+    seoDescription: 'La Pandora Coffee, cafetería en Calle 50, Ciudad de Panamá. Café de origen panameño, comida y cultura. Consulta ubicación, horario y contacto.',
     socialImageAlt: 'Taza de café de La Pandora Coffee sobre una mesa de madera',
     skip: 'Saltar al contenido',
     visit: 'Visítanos',
@@ -44,14 +72,39 @@ export const content = {
     consueloRole: 'Cofundadora',
     originEyebrow: 'De Panamá para compartir',
     originTitle: 'Una historia con raíces en el café panameño.',
-    originText: 'El proyecto comenzó con microlotes de café para exportación y luego abrió su barra de café en Ciudad de Panamá. Hoy La Pandora reúne origen, tueste y encuentros en un mismo lugar.',
+    originText: 'El proyecto comenzó con microlotes de café para exportación y luego abrió su barra de café en Ciudad de Panamá. El primer grano del proyecto se cosechó en Palmira, Boquete, a 1.200 metros. Hoy La Pandora reúne origen, tueste y encuentros en un mismo lugar.',
     originImageAlt: 'Empaque e identidad visual de La Pandora Coffee',
     originNote: 'Una fábula, muchas historias por descubrir.',
     questionsTitle: 'Antes de venir',
     questions: [
-      { question: '¿Dónde está La Pandora Coffee?', answer: 'Estamos en el área de Calle 50, Ciudad de Panamá. Puedes abrir la ubicación en Google Maps desde esta página.' },
-      { question: '¿Qué es La Pandora Coffee?', answer: 'Es una cafetería y un espacio de encuentro alrededor del café panameño, la cultura y las historias. El proyecto comenzó con microlotes para exportación y después abrió su barra de café.' },
-      { question: '¿Cuál es el horario?', answer: 'Abrimos de martes a sábado de 8:00 a. m. a 9:00 p. m. y los domingos de 8:00 a. m. a 4:00 p. m.' },
+      {
+        "question": "¿Dónde está La Pandora Coffee?",
+        "answer": "La Pandora Coffee está en el área de Calle 50, Ciudad de Panamá, Panamá. El enlace Cómo llegar abre el pin del local en Google Maps."
+      },
+      {
+        "question": "¿Cómo puedo contactar a La Pandora Coffee?",
+        "answer": "Puedes llamar al +507 6982-5757 o al +507 6626-8763 para consultar sobre el local, el café o tu visita."
+      },
+      {
+        "question": "¿Cuál es el horario de La Pandora Coffee?",
+        "answer": "La Pandora Coffee abre de martes a sábado de 8:00 a. m. a 9:00 p. m. y los domingos de 8:00 a. m. a 4:00 p. m. Para días festivos, confirma el horario por teléfono."
+      },
+      {
+        "question": "¿Hay estacionamiento?",
+        "answer": "Sí, hay estacionamiento en el local. Para detalles de acceso o una referencia de entrada, llama al equipo antes de tu visita."
+      },
+      {
+        "question": "¿De dónde viene el café de La Pandora?",
+        "answer": "La Pandora trabaja con café de origen panameño. El proyecto comenzó con microlotes para exportación y su primer grano se cosechó en Palmira, Boquete, a 1.200 metros. Consulta en el local el origen del lote disponible y el tueste recomendado."
+      },
+      {
+        "question": "¿La Pandora Coffee ofrece comida?",
+        "answer": "Sí. La experiencia de La Pandora Coffee combina café de origen panameño y comida en el local de Calle 50. Consulta con el equipo el menú y la disponibilidad del día."
+      },
+      {
+        "question": "¿Puedo consultar sobre café empacado o microlotes?",
+        "answer": "Sí. Contacta a La Pandora Coffee por teléfono para consultar la disponibilidad de café tostado y empacado, microlotes o propuestas para tu negocio. El equipo te orientará sobre el origen, el tueste y la preparación."
+      }
     ],
     visitEyebrow: 'Nos vemos aquí',
     visitTitle: 'La próxima historia empieza aquí.',
@@ -68,8 +121,36 @@ export const content = {
     credit: 'Diseño con mucho amor por',
   },
   en: {
+    home: "Home",
+    top: "Back to top",
+    contact: "Contact",
+    call: "Call",
+    parking: "Parking available",
+    visitDetails: "Location, contact and frequently asked questions",
+    sectionNav: "Explore La Pandora",
+    navSpace: "The space",
+    navStory: "The story",
+    navOrigin: "The origin",
+    visitPage: {
+      "title": "La Pandora Coffee, Calle 50 | Location & Contact",
+      "description": "Visit La Pandora Coffee on Calle 50, Panama City. Find directions, opening hours and parking information. Call +507 6982-5757 or +507 6626-8763.",
+      "nav": "Location & contact",
+      "eyebrow": "Calle 50 · Panama City",
+      "heading": "Your next pause, at La Pandora.",
+      "intro": "La Pandora Coffee is a coffee shop in the Calle 50 area of Panama City, Panama: Panamanian-origin coffee, food and a space to connect with coffee culture.",
+      "directionsTitle": "How to get to La Pandora Coffee",
+      "directionsText": "Open the coffee shop’s pin in Google Maps to plan your route. Parking is available. For entrance directions or access information, call us before your visit.",
+      "contactNote": "Ask about availability and confirm opening hours before visiting on public holidays.",
+      "coffeeTitle": "From Panamanian origins to the Calle 50 coffee bar",
+      "coffeeText": "La Pandora’s story began with coffee microlots for export. The project’s first coffee was grown in Palmira, Boquete, at an elevation of 1,200 metres. Opening the coffee bar in Panama City brought that story into an experience centred on coffee, roasting and food.",
+      "coffeeNote": "Ask the team about the origin of the current lot, its roast and the recommended brewing method.",
+      "storyLink": "Discover our story",
+      "imageAlt": "Table, coffee bar and packaged coffee display at La Pandora Coffee on Calle 50",
+      "faqTitle": "Answers to help you plan your visit"
+    },
+
     seoTitle: 'La Pandora Coffee | Coffee on Calle 50, Panama City',
-    seoDescription: 'Visit La Pandora Coffee, a coffee shop on Calle 50 in Panama City. Panamanian coffee, culture and stories in a welcoming place to meet.',
+    seoDescription: 'Discover La Pandora Coffee on Calle 50, Panama City. Panamanian coffee, food and culture. Find directions, opening hours and contact details.',
     socialImageAlt: 'La Pandora Coffee cup on a wooden table',
     skip: 'Skip to content',
     visit: 'Visit us',
@@ -108,14 +189,39 @@ export const content = {
     consueloRole: 'Co-founder',
     originEyebrow: 'Rooted in Panama',
     originTitle: 'A story rooted in Panamanian coffee.',
-    originText: 'The project began with coffee microlots for export before opening its coffee bar in Panama City. Today La Pandora brings origin, roasting and encounters together in one place.',
+    originText: 'The project began with coffee microlots for export before opening its coffee bar in Panama City. The project’s first coffee was grown in Palmira, Boquete, at 1,200 metres. Today La Pandora brings origin, roasting and encounters together in one place.',
     originImageAlt: 'La Pandora Coffee packaging and visual identity',
     originNote: 'One fable, many stories to discover.',
     questionsTitle: 'Before you visit',
     questions: [
-      { question: 'Where is La Pandora Coffee?', answer: 'We are in the Calle 50 area of Panama City. You can open our location in Google Maps from this page.' },
-      { question: 'What is La Pandora Coffee?', answer: 'It is a coffee shop and meeting place centered on Panamanian coffee, culture and stories. The project began with export microlots before opening its coffee bar.' },
-      { question: 'What are the opening hours?', answer: 'We are open Tuesday through Saturday from 8:00 am to 9:00 pm, and Sunday from 8:00 am to 4:00 pm.' },
+      {
+        "question": "Where is La Pandora Coffee?",
+        "answer": "La Pandora Coffee is in the Calle 50 area of Panama City, Panama. The Get directions link opens the coffee shop’s pin in Google Maps."
+      },
+      {
+        "question": "How can I contact La Pandora Coffee?",
+        "answer": "Call +507 6982-5757 or +507 6626-8763 to ask about the coffee shop, its coffee or your visit."
+      },
+      {
+        "question": "What are La Pandora Coffee’s opening hours?",
+        "answer": "La Pandora Coffee opens Tuesday to Saturday from 8:00 am to 9:00 pm and Sundays from 8:00 am to 4:00 pm. Confirm public holiday hours by phone."
+      },
+      {
+        "question": "Is parking available?",
+        "answer": "Yes, parking is available at the coffee shop. Call the team before your visit for entrance directions or access details."
+      },
+      {
+        "question": "Where does La Pandora’s coffee come from?",
+        "answer": "La Pandora works with Panamanian-origin coffee. The project began with export microlots, and its first coffee was grown in Palmira, Boquete, at 1,200 metres. Ask the team about the origin of the current lot and its recommended roast."
+      },
+      {
+        "question": "Does La Pandora Coffee serve food?",
+        "answer": "Yes. The La Pandora Coffee experience combines Panamanian-origin coffee and food at its Calle 50 location. Ask the team about the current menu and daily availability."
+      },
+      {
+        "question": "Can I ask about packaged coffee or microlots?",
+        "answer": "Yes. Contact La Pandora Coffee by phone to ask about roasted packaged coffee, microlots or proposals for your business. The team can explain the origin, roast and preparation."
+      }
     ],
     visitEyebrow: 'See you here',
     visitTitle: 'Your next story starts here.',
@@ -132,8 +238,36 @@ export const content = {
     credit: 'Designed with love by',
   },
   ru: {
+    home: "Главная",
+    top: "Наверх",
+    contact: "Контакты",
+    call: "Позвонить",
+    parking: "Есть парковка",
+    visitDetails: "Адрес, контакты и ответы на вопросы",
+    sectionNav: "Откройте La Pandora",
+    navSpace: "Кофейня",
+    navStory: "История",
+    navOrigin: "Происхождение",
+    visitPage: {
+      "title": "La Pandora Coffee на Calle 50 | Адрес и контакты",
+      "description": "La Pandora Coffee на Calle 50 в Панама-Сити: маршрут, часы работы и парковка. Контакты: +507 6982-5757 и +507 6626-8763.",
+      "nav": "Адрес и контакты",
+      "eyebrow": "Calle 50 · Панама-Сити",
+      "heading": "Ваша следующая пауза — в La Pandora.",
+      "intro": "La Pandora Coffee — кофейня в районе Calle 50 в Панама-Сити: панамский кофе, еда и место для знакомства с культурой кофе.",
+      "directionsTitle": "Как добраться до La Pandora Coffee",
+      "directionsText": "Откройте отметку кофейни в Google Картах, чтобы спланировать маршрут. Есть парковка. Для уточнения входа и условий доступа позвоните нам перед визитом.",
+      "contactNote": "Уточните наличие интересующих предложений и часы работы в праздничные дни по телефону.",
+      "coffeeTitle": "От панамских истоков к кофейной стойке на Calle 50",
+      "coffeeText": "История La Pandora началась с небольших партий кофе для экспорта. Первый кофе проекта вырастили в Palmira, Boquete, на высоте 1 200 метров. Открытие кофейной стойки в Панама-Сити позволило продолжить эту историю через кофе, обжарку и еду.",
+      "coffeeNote": "Уточните у команды происхождение доступной партии, её обжарку и рекомендуемый способ приготовления.",
+      "storyLink": "Узнать нашу историю",
+      "imageAlt": "Стол, кофейная стойка и витрина с упакованным кофе в La Pandora Coffee на Calle 50",
+      "faqTitle": "Ответы перед посещением кофейни"
+    },
+
     seoTitle: 'La Pandora Coffee | Кофейня на Calle 50, Панама-Сити',
-    seoDescription: 'La Pandora Coffee — кофейня на Calle 50 в Панама-Сити. Панамский кофе, культура и истории в пространстве для встреч.',
+    seoDescription: 'La Pandora Coffee — кофейня на Calle 50 в Панама-Сити. Панамский кофе, еда и культура. Узнайте маршрут, часы работы и контакты кофейни.',
     socialImageAlt: 'Чашка кофе La Pandora Coffee на деревянном столе',
     skip: 'Перейти к содержимому',
     visit: 'Как нас найти',
@@ -172,14 +306,39 @@ export const content = {
     consueloRole: 'Соосновательница',
     originEyebrow: 'Наши корни в Панаме',
     originTitle: 'История, выросшая из панамского кофе.',
-    originText: 'Проект начался с небольших партий кофе для экспорта, а затем открыл кофейную стойку в Панама-Сити. Сегодня La Pandora соединяет происхождение кофе, обжарку и встречи.',
+    originText: 'Проект начался с небольших партий кофе для экспорта, а затем открыл кофейную стойку в Панама-Сити. Первый кофе проекта вырастили в Palmira, Boquete, на высоте 1 200 метров. Сегодня La Pandora соединяет происхождение кофе, обжарку и встречи.',
     originImageAlt: 'Упаковка и фирменный стиль La Pandora Coffee',
     originNote: 'Одна сказка и множество новых историй.',
     questionsTitle: 'Перед визитом',
     questions: [
-      { question: 'Где находится La Pandora Coffee?', answer: 'Мы находимся в районе Calle 50 в Панама-Сити. С этой страницы можно открыть наше местоположение в Google Картах.' },
-      { question: 'Что такое La Pandora Coffee?', answer: 'Это кофейня и место встреч, посвящённое панамскому кофе, культуре и историям. Проект начался с небольших партий кофе на экспорт, а затем открыл свою кофейную стойку.' },
-      { question: 'Какой график работы?', answer: 'Мы открыты со вторника по субботу с 08:00 до 21:00 и в воскресенье с 08:00 до 16:00.' },
+      {
+        "question": "Где находится La Pandora Coffee?",
+        "answer": "La Pandora Coffee находится в районе Calle 50 в Панама-Сити, Панама. Ссылка на маршрут открывает отметку кофейни в Google Картах."
+      },
+      {
+        "question": "Как связаться с La Pandora Coffee?",
+        "answer": "Позвоните по номеру +507 6982-5757 или +507 6626-8763, чтобы уточнить информацию о кофейне, кофе или вашем визите."
+      },
+      {
+        "question": "Каковы часы работы La Pandora Coffee?",
+        "answer": "La Pandora Coffee открыта со вторника по субботу с 08:00 до 21:00 и по воскресеньям с 08:00 до 16:00. Уточняйте график в праздничные дни по телефону."
+      },
+      {
+        "question": "Есть ли парковка?",
+        "answer": "Да, у кофейни есть парковка. Для уточнения входа и условий доступа позвоните команде перед визитом."
+      },
+      {
+        "question": "Откуда кофе La Pandora?",
+        "answer": "La Pandora работает с панамским кофе. Проект начался с небольших партий для экспорта, а первый кофе вырастили в Palmira, Boquete, на высоте 1 200 метров. Уточните в кофейне происхождение доступной партии и рекомендуемую обжарку."
+      },
+      {
+        "question": "В La Pandora Coffee есть еда?",
+        "answer": "Да. В кофейне La Pandora Coffee на Calle 50 можно познакомиться с панамским кофе и попробовать еду. Уточните актуальное меню и наличие блюд у команды."
+      },
+      {
+        "question": "Можно ли узнать об упакованном кофе или микролотах?",
+        "answer": "Да. Свяжитесь с La Pandora Coffee по телефону, чтобы уточнить наличие обжаренного упакованного кофе, микролотов или предложений для вашего бизнеса. Команда расскажет о происхождении, обжарке и приготовлении."
+      }
     ],
     visitEyebrow: 'До встречи',
     visitTitle: 'Ваша следующая история начинается здесь.',

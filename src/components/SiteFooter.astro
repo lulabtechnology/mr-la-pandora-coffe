@@ -1,0 +1,14 @@
+---
+import { content, type Locale } from '../data/content';
+import { homePaths, visitPaths } from '../data/site';
+import ContactLinks from './ContactLinks.astro';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = content[locale];
+---
+<footer class="footer"><div class="footer-inner">
+  <a href={homePaths[locale]} aria-label={`La Pandora Coffee, ${t.home}`}><img src="/images/logo-oficial.jpg" alt="La Pandora Coffee" width="723" height="723" loading="lazy" /></a>
+  <p>{t.footerLine}</p>
+  <div class="footer-contact"><span>{t.contact}</span><ContactLinks locale={locale} /><a class="under-link" href={visitPaths[locale]}>{t.visitPage.nav}<span aria-hidden="true">↗</span></a></div>
+  <div class="footer-bottom"><span>© {new Date().getFullYear()} La Pandora Coffee. {t.rights}</span><span>{t.locationValue}</span><span>{t.credit} <a href="https://lulabtech.com/">LulabTech</a></span><a class="back-to-top" href="#main" aria-label={t.top}>↑</a></div>
+</div></footer>
